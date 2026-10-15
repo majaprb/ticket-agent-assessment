@@ -70,6 +70,8 @@ The supported statuses are:
 
 The API also handles invalid statuses with a 422 response and missing tickets with a 404 response.
 
+Tickets are stored in memory for this assessment, so ticket data is reset when the API is restarted.
+
 ## GenAI agent
 
 The agent is in `agent/agent.py`.
