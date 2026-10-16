@@ -82,7 +82,7 @@ With the API running in one terminal, start the agent in another:
 python agent/agent.py
 ```
 
-The agent takes normal language requests rather than requiring the user to choose an API operation manually.
+The agent takes natural language requests rather than requiring the user to choose an API operation manually.
 
 Examples:
 
@@ -198,3 +198,11 @@ python agent/agent.py
 ```
 
 The agent can then be used through the command line with natural-language ticket requests.
+
+## If this were production
+
+One thing I would change for a production system is the ticket storage.
+
+For this assessment, tickets are stored in memory to keep the API simple. This means the data is lost whenever the API restarts.
+
+In production, I would move ticket storage to a persistent database and keep the API layer stateless. This would prevent ticket data from being lost when the API process restarts and make the service more suitable for running across multiple instances.
